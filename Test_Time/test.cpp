@@ -1,3 +1,5 @@
+/// @author Maltseva K.V.
+
 #include "pch.h"
 #include"../class/class/time.cpp"
 #include <iomanip>
@@ -43,16 +45,10 @@ TEST(TestTime, TestConvertToAll) {
 	CTime t4(0, 6, 28, 30);
 	EXPECT_EQ(CTime::convert_to_seconds(t2), 81384);
 	EXPECT_EQ(CTime::convert_to_seconds(t3), 12012);
-	//EXPECT_EQ(CTime::convert_to_hours(t4), 7.43);
-	//EXPECT_EQ(CTime::convert_to_hours(t3), 3.53); //ghjdthbv
-	//EXPECT_EQ(CTime::convert_to_minutes(t2), 1356.40);
+
 }
 
-TEST(TestTime, TestSubTime) {
-	CTime t1(1, 22, 36, 24);
-	CTime t2(0, 3, 20, 12);
-	//EXPECT_EQ
-}
+
 // проверка добавления времени
 TEST(TestTime, TestAddTime) {
 
