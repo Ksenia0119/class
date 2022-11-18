@@ -115,3 +115,4 @@ class CTime{
 		/// Преобразовать в строку кол-во секунд
 		std::string print_time_second() const;
 };
+///Перекодировка юникод

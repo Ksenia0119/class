@@ -258,3 +258,4 @@ std::string CTime::print_time_of_day() const {
 std::string CTime::print_time_second() const {
 	return "Seconds " + std::to_string(get_all_time());
 }
+///Перекодировка юникод
