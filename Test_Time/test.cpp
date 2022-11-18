@@ -4,7 +4,7 @@
 #include"../class/class/time.cpp"
 #include <iomanip>
 #include<string>
-//проверка конструктора с параметрами и геттеров
+//РїСЂРѕРІРµСЂРєР° РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂР° СЃ РїР°СЂР°РјРµС‚СЂР°РјРё Рё РіРµС‚С‚РµСЂРѕРІ
 TEST(TestTime, TestGetAll) {
 	CTime t(2, 5, 6, 7);
   EXPECT_EQ(t.get_days(), 2);
@@ -12,7 +12,7 @@ TEST(TestTime, TestGetAll) {
   EXPECT_EQ(t.get_minutes(), 6);
   EXPECT_EQ(t.get_seconds(), 7);
 }
-// проверка конструктора без параметров и сеттера (в стандартном формате)
+// РїСЂРѕРІРµСЂРєР° РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂР° Р±РµР· РїР°СЂР°РјРµС‚СЂРѕРІ Рё СЃРµС‚С‚РµСЂР° (РІ СЃС‚Р°РЅРґР°СЂС‚РЅРѕРј С„РѕСЂРјР°С‚Рµ)
 TEST(TestTime, TestSetTime) {
 
 	CTime t;
@@ -23,11 +23,11 @@ TEST(TestTime, TestSetTime) {
 	EXPECT_EQ(t.get_minutes(), 7);
 	EXPECT_EQ(t.get_seconds(), 34);
 }
-// проверка сеттеров дней,часов,минут,секунд
+// РїСЂРѕРІРµСЂРєР° СЃРµС‚С‚РµСЂРѕРІ РґРЅРµР№,С‡Р°СЃРѕРІ,РјРёРЅСѓС‚,СЃРµРєСѓРЅРґ
 
 TEST(TestTime, TestSetAll) {
 
-	CTime t; // вызов конструктора без параметров
+	CTime t; // РІС‹Р·РѕРІ РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂР° Р±РµР· РїР°СЂР°РјРµС‚СЂРѕРІ
 	t.set_days(2);
 	t.set_hours(19);
 	t.set_minutes(30);
@@ -38,7 +38,7 @@ TEST(TestTime, TestSetAll) {
 	EXPECT_EQ(t.get_minutes(), 30);
 	EXPECT_EQ(t.get_seconds(), 57);
 }
-// проверка конвертации в секунды
+// РїСЂРѕРІРµСЂРєР° РєРѕРЅРІРµСЂС‚Р°С†РёРё РІ СЃРµРєСѓРЅРґС‹
 TEST(TestTime, TestConvertToAll) {
 	CTime t2(0, 22, 36, 24);
 	CTime t3(0, 3, 20, 12);
@@ -49,7 +49,7 @@ TEST(TestTime, TestConvertToAll) {
 }
 
 
-// проверка добавления времени
+// РїСЂРѕРІРµСЂРєР° РґРѕР±Р°РІР»РµРЅРёСЏ РІСЂРµРјРµРЅРё
 TEST(TestTime, TestAddTime) {
 
 	CTime t1(0, 2, 25, 48);
@@ -68,7 +68,7 @@ TEST(TestTime, TestAddTime) {
 	EXPECT_EQ(t1.get_seconds(), 52);
 
 }
-//проверка добавления секунд к времени
+//РїСЂРѕРІРµСЂРєР° РґРѕР±Р°РІР»РµРЅРёСЏ СЃРµРєСѓРЅРґ Рє РІСЂРµРјРµРЅРё
 TEST(TestTime, TestAddTimeSeconds) {
 	CTime t1(0, 5, 29, 23);
 	t1.add_seconds(60);
@@ -79,7 +79,7 @@ TEST(TestTime, TestAddTimeSeconds) {
 	EXPECT_EQ(t1.get_seconds(), 23);
 	;
 }
-//проверка добавления минут к времени
+//РїСЂРѕРІРµСЂРєР° РґРѕР±Р°РІР»РµРЅРёСЏ РјРёРЅСѓС‚ Рє РІСЂРµРјРµРЅРё
 TEST(TestTime, TestAddTimeMinutes) {
 	CTime t1(0, 6, 46, 20);
 	t1.add_minutes(20);
@@ -89,7 +89,7 @@ TEST(TestTime, TestAddTimeMinutes) {
 	EXPECT_EQ(t1.get_seconds(), 20);
 	
 }
-//проверка добавления часов к времени
+//РїСЂРѕРІРµСЂРєР° РґРѕР±Р°РІР»РµРЅРёСЏ С‡Р°СЃРѕРІ Рє РІСЂРµРјРµРЅРё
 TEST(TestTime, TestAddTimeHours) {
 	CTime t1(0, 6, 46, 20);
 	t1.add_hours(5);
@@ -99,7 +99,7 @@ TEST(TestTime, TestAddTimeHours) {
 	EXPECT_EQ(t1.get_seconds(), 20);
 
 }
-//проверка добавления суток к времени
+//РїСЂРѕРІРµСЂРєР° РґРѕР±Р°РІР»РµРЅРёСЏ СЃСѓС‚РѕРє Рє РІСЂРµРјРµРЅРё
 TEST(TestTime, TestAddTimeDays) {
 	CTime t1(0, 20, 4, 4);
 	t1.add_days(5);
@@ -109,7 +109,7 @@ TEST(TestTime, TestAddTimeDays) {
 	EXPECT_EQ(t1.get_seconds(), 4);
 
 }
-// проверка преобразования в строку время
+// РїСЂРѕРІРµСЂРєР° РїСЂРµРѕР±СЂР°Р·РѕРІР°РЅРёСЏ РІ СЃС‚СЂРѕРєСѓ РІСЂРµРјСЏ
 TEST(TestTime, TestToString) {
 
 	CTime t(2, 23, 15, 34);
@@ -118,3 +118,4 @@ TEST(TestTime, TestToString) {
 	EXPECT_EQ(t.print_time_second(), "Seconds 256534");
 	EXPECT_EQ(t.print_time_of_day(), "Time of day: 23:15:34");
 }
+///РџРµСЂРµРєРѕРґРёСЂРѕРІРєР° СЋРЅРёРєРѕРґ
